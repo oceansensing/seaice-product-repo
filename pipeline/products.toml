@@ -1,0 +1,277 @@
+# What this repository publishes: satellite sea ice from the Copernicus Marine Service, each grid
+# reaching as far toward its pole as its satellites see — EUMETSAT OSI SAF's daily concentration,
+# ice edge and ice type at 0.1 degree and its 48-hour drift at 62.5 km, both poles on one grid; DTU
+# Space's Sentinel-1 SAR drift; DMI's 1 km concentrations (the Antarctic's the newest of 7 days, each
+# cell's age beside it) and the Arctic's sea and ice surface temperature; AWI's CryoSat-2 and SMOS
+# thickness, each pole's; FMI and SMHI's Baltic ice charts. The fetcher is the site's
+# `scripts/fetch-seaice.py`, whose docstring carries the measurements.
+#
+# **To the second host alone** (`r2_only`, the site pipeline's D13, its note of 2026-10-09): every
+# root and tile of these products is published to Cloudflare R2 and not to Pages, which carries the
+# status alone. The roots stay on the `published` branch, where the next run seeds from them.
+#
+# **The budgets are each upstream's latency plus a missed day**, measured 2026-10-17 at 13:19 UTC
+# from each dataset's newest step: OSI SAF's day D and DMI's surface temperature at D+1 (a root's
+# time is its day's start, so 72 hours), DTU's 12-hourly composites within 13 hours (48), DMI's 1 km
+# grids at D+2 (96), the Antarctic thickness's 7-day means five days late (168). The Arctic's
+# thickness has none: its season is October to April, and the rest of the year its last day stands.
+#
+# Two rules inherited from the sibling repositories:
+#
+# - **Every `roots` entry here must be one the site's `test-schema.mjs --roots` publishes**, or the
+#   orchestrator exits 2 and stops the publish.
+# - **A product that leaves takes its files with it**: the seed leaves a top-level file no
+#   product's `writes` claims, and the R2 publish removes it.
+
+# **The paths are relative to the site checkout, not to this workspace.**
+
+[contract]
+check = ["node", "scripts/test-schema.mjs"]
+roots = ["node", "scripts/test-schema.mjs", "--roots"]
+
+[defaults]
+timeout_minutes = 20
+
+[steps.sic-osisaf]
+cmd = ["python3", "scripts/fetch-seaice.py", "--only=sic-osisaf"]
+lane = "copernicus"
+
+[steps.siedge-osisaf]
+cmd = ["python3", "scripts/fetch-seaice.py", "--only=siedge-osisaf"]
+lane = "copernicus"
+
+[steps.sitype-osisaf]
+cmd = ["python3", "scripts/fetch-seaice.py", "--only=sitype-osisaf"]
+lane = "copernicus"
+
+[steps.sidrift-osisaf]
+cmd = ["python3", "scripts/fetch-seaice.py", "--only=sidrift-osisaf"]
+lane = "copernicus"
+
+[steps.sidrift-dtu]
+cmd = ["python3", "scripts/fetch-seaice.py", "--only=sidrift-dtu"]
+lane = "copernicus"
+
+[steps.sic-dmi-arctic]
+cmd = ["python3", "scripts/fetch-seaice.py", "--only=sic-dmi-arctic"]
+lane = "copernicus"
+
+[steps.sic-dmi-antarctic]
+cmd = ["python3", "scripts/fetch-seaice.py", "--only=sic-dmi-antarctic"]
+lane = "copernicus"
+
+[steps.sit-cs2smos-arctic]
+cmd = ["python3", "scripts/fetch-seaice.py", "--only=sit-cs2smos-arctic"]
+lane = "copernicus"
+
+[steps.sit-cs2smos-antarctic]
+cmd = ["python3", "scripts/fetch-seaice.py", "--only=sit-cs2smos-antarctic"]
+lane = "copernicus"
+
+[steps.ist-dmi]
+cmd = ["python3", "scripts/fetch-seaice.py", "--only=ist-dmi"]
+lane = "copernicus"
+
+[steps.sic-fmi]
+cmd = ["python3", "scripts/fetch-seaice.py", "--only=sic-fmi"]
+lane = "copernicus"
+
+[steps.sit-fmi]
+cmd = ["python3", "scripts/fetch-seaice.py", "--only=sit-fmi"]
+lane = "copernicus"
+
+[products.sic-osisaf]
+title = "Sea ice concentration, both poles, daily, AMSR at 10 km (EUMETSAT OSI SAF)"
+step = "sic-osisaf"
+roots = ["sic-osisaf.json"]
+writes = ["sic-osisaf.json"]
+namespace = ["python3", "scripts/fetch-seaice.py", "--namespace", "--only=sic-osisaf"]
+max_age_hours = 72
+r2_only = true
+
+[products.sic-osisaf.tiles]
+build = ["python3", "scripts/fetch-seaice.py", "--tiles", "--only=sic-osisaf"]
+key = ["python3", "scripts/fetch-seaice.py", "--tile-key", "--only=sic-osisaf"]
+cache = "seaice-sic-osisaf-tiles"
+match = [
+  ["tiles-sic-osisaf", "sic-osisaf.json"],
+]
+
+[products.siedge-osisaf]
+title = "Sea ice edge, both poles, daily: open water, open ice, closed ice (EUMETSAT OSI SAF)"
+step = "siedge-osisaf"
+roots = ["siedge-osisaf.json"]
+writes = ["siedge-osisaf.json"]
+namespace = ["python3", "scripts/fetch-seaice.py", "--namespace", "--only=siedge-osisaf"]
+max_age_hours = 72
+r2_only = true
+
+[products.siedge-osisaf.tiles]
+build = ["python3", "scripts/fetch-seaice.py", "--tiles", "--only=siedge-osisaf"]
+key = ["python3", "scripts/fetch-seaice.py", "--tile-key", "--only=siedge-osisaf"]
+cache = "seaice-siedge-osisaf-tiles"
+match = [
+  ["tiles-siedge-osisaf", "siedge-osisaf.json"],
+]
+
+[products.sitype-osisaf]
+title = "Sea ice type, both poles, daily: open water, first-year, multi-year, ambiguous (EUMETSAT OSI SAF)"
+step = "sitype-osisaf"
+roots = ["sitype-osisaf.json"]
+writes = ["sitype-osisaf.json"]
+namespace = ["python3", "scripts/fetch-seaice.py", "--namespace", "--only=sitype-osisaf"]
+max_age_hours = 72
+r2_only = true
+
+[products.sitype-osisaf.tiles]
+build = ["python3", "scripts/fetch-seaice.py", "--tiles", "--only=sitype-osisaf"]
+key = ["python3", "scripts/fetch-seaice.py", "--tile-key", "--only=sitype-osisaf"]
+cache = "seaice-sitype-osisaf-tiles"
+match = [
+  ["tiles-sitype-osisaf", "sitype-osisaf.json"],
+]
+
+[products.sidrift-osisaf]
+title = "Sea ice drift, both poles, over 48 hours at 62.5 km (EUMETSAT OSI SAF)"
+step = "sidrift-osisaf"
+roots = ["sidrift-osisaf.json"]
+writes = ["sidrift-osisaf.json"]
+namespace = ["python3", "scripts/fetch-seaice.py", "--namespace", "--only=sidrift-osisaf"]
+max_age_hours = 72
+r2_only = true
+
+[products.sidrift-dtu]
+title = "Sea ice drift from Sentinel-1 SAR, both poles, 24 hour composites every 12 hours (DTU Space)"
+step = "sidrift-dtu"
+roots = ["sidrift-dtu.json"]
+writes = ["sidrift-dtu.json"]
+namespace = ["python3", "scripts/fetch-seaice.py", "--namespace", "--only=sidrift-dtu"]
+max_age_hours = 48
+r2_only = true
+
+[products.sidrift-dtu.tiles]
+build = ["python3", "scripts/fetch-seaice.py", "--tiles", "--only=sidrift-dtu"]
+key = ["python3", "scripts/fetch-seaice.py", "--tile-key", "--only=sidrift-dtu"]
+cache = "seaice-sidrift-dtu-tiles"
+match = [
+  ["tiles-sidrift-dtu", "sidrift-dtu.json"],
+]
+
+[products.sic-dmi-arctic]
+title = "Sea ice concentration, Arctic, daily at 1 km from SAR and AMSR (DMI)"
+step = "sic-dmi-arctic"
+roots = ["sic-dmi-arctic.json"]
+writes = ["sic-dmi-arctic.json"]
+namespace = ["python3", "scripts/fetch-seaice.py", "--namespace", "--only=sic-dmi-arctic"]
+max_age_hours = 96
+r2_only = true
+
+[products.sic-dmi-arctic.tiles]
+build = ["python3", "scripts/fetch-seaice.py", "--tiles", "--only=sic-dmi-arctic"]
+key = ["python3", "scripts/fetch-seaice.py", "--tile-key", "--only=sic-dmi-arctic"]
+cache = "seaice-sic-dmi-arctic-tiles"
+match = [
+  ["tiles-sic-dmi-arctic", "sic-dmi-arctic.json"],
+]
+
+[products.sic-dmi-antarctic]
+title = "Sea ice concentration, Antarctic, at 1 km from SAR swaths, the newest of 7 days with its age (DMI)"
+step = "sic-dmi-antarctic"
+roots = ["sic-dmi-antarctic.json", "sic-dmi-antarctic-age.json"]
+writes = ["sic-dmi-antarctic.json", "sic-dmi-antarctic-age.json"]
+namespace = ["python3", "scripts/fetch-seaice.py", "--namespace", "--only=sic-dmi-antarctic"]
+max_age_hours = 96
+r2_only = true
+
+[products.sic-dmi-antarctic.tiles]
+build = ["python3", "scripts/fetch-seaice.py", "--tiles", "--only=sic-dmi-antarctic"]
+key = ["python3", "scripts/fetch-seaice.py", "--tile-key", "--only=sic-dmi-antarctic"]
+cache = "seaice-sic-dmi-antarctic-tiles"
+match = [
+  ["tiles-sic-dmi-antarctic", "sic-dmi-antarctic.json"],
+  ["tiles-sic-dmi-antarctic-age", "sic-dmi-antarctic-age.json"],
+]
+
+[products.sit-cs2smos-arctic]
+title = "Sea ice thickness, Arctic, 7 day means from CryoSat-2 and SMOS, October to April (AWI)"
+step = "sit-cs2smos-arctic"
+roots = ["sit-cs2smos-arctic.json"]
+writes = ["sit-cs2smos-arctic.json"]
+namespace = ["python3", "scripts/fetch-seaice.py", "--namespace", "--only=sit-cs2smos-arctic"]
+r2_only = true
+
+[products.sit-cs2smos-arctic.tiles]
+build = ["python3", "scripts/fetch-seaice.py", "--tiles", "--only=sit-cs2smos-arctic"]
+key = ["python3", "scripts/fetch-seaice.py", "--tile-key", "--only=sit-cs2smos-arctic"]
+cache = "seaice-sit-cs2smos-arctic-tiles"
+match = [
+  ["tiles-sit-cs2smos-arctic", "sit-cs2smos-arctic.json"],
+]
+
+[products.sit-cs2smos-antarctic]
+title = "Sea ice thickness, Antarctic, 7 day means from CryoSat-2 and SMOS (AWI)"
+step = "sit-cs2smos-antarctic"
+roots = ["sit-cs2smos-antarctic.json"]
+writes = ["sit-cs2smos-antarctic.json"]
+namespace = ["python3", "scripts/fetch-seaice.py", "--namespace", "--only=sit-cs2smos-antarctic"]
+max_age_hours = 168
+r2_only = true
+
+[products.sit-cs2smos-antarctic.tiles]
+build = ["python3", "scripts/fetch-seaice.py", "--tiles", "--only=sit-cs2smos-antarctic"]
+key = ["python3", "scripts/fetch-seaice.py", "--tile-key", "--only=sit-cs2smos-antarctic"]
+cache = "seaice-sit-cs2smos-antarctic-tiles"
+match = [
+  ["tiles-sit-cs2smos-antarctic", "sit-cs2smos-antarctic.json"],
+]
+
+[products.ist-dmi]
+title = "Sea and ice surface temperature, Arctic, daily analysis at 0.05 degree (DMI)"
+step = "ist-dmi"
+roots = ["ist-dmi.json"]
+writes = ["ist-dmi.json"]
+namespace = ["python3", "scripts/fetch-seaice.py", "--namespace", "--only=ist-dmi"]
+max_age_hours = 72
+r2_only = true
+
+[products.ist-dmi.tiles]
+build = ["python3", "scripts/fetch-seaice.py", "--tiles", "--only=ist-dmi"]
+key = ["python3", "scripts/fetch-seaice.py", "--tile-key", "--only=ist-dmi"]
+cache = "seaice-ist-dmi-tiles"
+match = [
+  ["tiles-ist-dmi", "ist-dmi.json"],
+]
+
+[products.sic-fmi]
+title = "Sea ice concentration, Baltic Sea, daily ice charts in the ice season (FMI and SMHI)"
+step = "sic-fmi"
+roots = ["sic-fmi.json"]
+writes = ["sic-fmi.json"]
+namespace = ["python3", "scripts/fetch-seaice.py", "--namespace", "--only=sic-fmi"]
+max_age_hours = 72
+r2_only = true
+
+[products.sic-fmi.tiles]
+build = ["python3", "scripts/fetch-seaice.py", "--tiles", "--only=sic-fmi"]
+key = ["python3", "scripts/fetch-seaice.py", "--tile-key", "--only=sic-fmi"]
+cache = "seaice-sic-fmi-tiles"
+match = [
+  ["tiles-sic-fmi", "sic-fmi.json"],
+]
+
+[products.sit-fmi]
+title = "Sea ice thickness, Baltic Sea, daily ice charts in the ice season (FMI and SMHI)"
+step = "sit-fmi"
+roots = ["sit-fmi.json"]
+writes = ["sit-fmi.json"]
+namespace = ["python3", "scripts/fetch-seaice.py", "--namespace", "--only=sit-fmi"]
+max_age_hours = 72
+r2_only = true
+
+[products.sit-fmi.tiles]
+build = ["python3", "scripts/fetch-seaice.py", "--tiles", "--only=sit-fmi"]
+key = ["python3", "scripts/fetch-seaice.py", "--tile-key", "--only=sit-fmi"]
+cache = "seaice-sit-fmi-tiles"
+match = [
+  ["tiles-sit-fmi", "sit-fmi.json"],
+]
