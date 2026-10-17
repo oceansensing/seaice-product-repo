@@ -1,7 +1,7 @@
 # seaice-product-repo: the founding plan and running record
 
 **Satellite sea ice**, from the Copernicus Marine Service. Created on GitHub by the owner and given its documents by the site's
-`pipeline/scaffold/new-origin.py`. **Nothing is published yet.**
+`pipeline/scaffold/new-origin.py`. **Publishing since 2026-10-17, every three hours.**
 
 ## What it is for
 
@@ -11,9 +11,16 @@ Satellite sea ice from the Copernicus Marine Service, each grid reaching as far 
 
 The Copernicus Marine Service's sea ice catalogue (SEAICE_GLO_SEAICE_L4_NRT_OBSERVATIONS_011_001 and 011_006, SEAICE_ARC_PHY_AUTO_L4_MYNRT_011_024, SEAICE_ANT_PHY_AUTO_L3_NRT_011_012, SEAICE_ARC_SEAICE_L4_NRT_OBSERVATIONS_011_008, SEAICE_GLO_PHY_L4_NRT_011_014, SEAICE_BAL_SEAICE_L4_NRT_OBSERVATIONS_011_004), read through the Copernicus Marine toolbox from its map-shaped stores. **Their terms were read before a line was written** (2026-10-17): the Copernicus Marine Service licence, crediting the Copernicus Marine Service and each product's DOI, and OSI SAF's products EUMETSAT's, *Copyright © EUMETSAT* shown with them. OSI SAF's radiometer products take AMSR3 (GOSAT-GW) since 2026-09-01 under their datasets' old "amsr2" names.
 
+## Record
+
+**2026-10-17: the first dispatched run, 39044822092, green** (15:23-15:29 UTC): all twelve
+products fresh, none refused, 38 published files matching the contract; the drifts held to
+their frames on the runner (OSI SAF's end positions turned +0.6 and +0.1 degrees, DTU's
+against OSI SAF's +1.4 over 4,250 cells); the 1 km Arctic 308 tiles, 295 MB, in 23 s;
+R2 equal to the build, 846 files uploaded, none deleted. **Scheduled the same hour**, every
+three hours at 17 past.
+
 ## Open
 
-1. The first dispatched run, read: the twelve products fresh, R2 alone, the 1 km Arctic's 300 MB uploaded.
-2. Then the schedule (every three hours).
-3. The Arctic thickness's season: its first October day (due around the 18th-20th), and in April its last.
-4. The Baltic's ice season: the charts' first ice, and the Bothnia control observed.
+1. The Arctic thickness's season: its first October day (due around the 18th-20th), and in April its last.
+2. The Baltic's ice season: the charts' first ice, and the Bothnia control observed.
