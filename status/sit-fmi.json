@@ -1,0 +1,27 @@
+{
+ "schema": 1,
+ "product": "sit-fmi",
+ "title": "Sea ice thickness, Baltic Sea, daily ice charts in the ice season (FMI and SMHI)",
+ "fate": "fresh",
+ "reason": null,
+ "checked": "2026-10-24T21:28:20Z",
+ "updated": "2026-10-24T15:27:54Z",
+ "hour": "2026-10-24T12:00:00Z",
+ "modelRun": null,
+ "source": "FMI and SMHI / Copernicus Marine",
+ "hours": [
+  "2026-10-24T12:00:00Z"
+ ],
+ "files": {
+  "sit-fmi.json": {
+   "bytes": 479522,
+   "sha256": "762ce10d2c5ef93b90a87c2f5112196d11d51aa3556f5f130ceec1a21c6f36cc"
+  }
+ },
+ "tiles": {
+  "tiles-sit-fmi": {
+   "state": "kept",
+   "reason": null
+  }
+ }
+}

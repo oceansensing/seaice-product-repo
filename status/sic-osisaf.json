@@ -1,0 +1,27 @@
+{
+ "schema": 1,
+ "product": "sic-osisaf",
+ "title": "Sea ice concentration, both poles, daily, AMSR at 10 km (EUMETSAT OSI SAF)",
+ "fate": "fresh",
+ "reason": null,
+ "checked": "2026-10-24T21:28:20Z",
+ "updated": "2026-10-20T03:36:05Z",
+ "hour": "2026-10-19T00:00:00Z",
+ "modelRun": null,
+ "source": "EUMETSAT OSI SAF / Copernicus Marine",
+ "hours": [
+  "2026-10-19T00:00:00Z"
+ ],
+ "files": {
+  "sic-osisaf.json": {
+   "bytes": 1167314,
+   "sha256": "80ad9f4f3ee2cd378ad5ff862a8c126a4e9e2a0300538d338a9c3360d530d0e8"
+  }
+ },
+ "tiles": {
+  "tiles-sic-osisaf": {
+   "state": "kept",
+   "reason": null
+  }
+ }
+}

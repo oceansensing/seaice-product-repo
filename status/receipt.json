@@ -1,0 +1,56 @@
+{
+ "schema": 1,
+ "generated": "2026-10-24T21:28:20Z",
+ "mode": "full",
+ "fates": {
+  "sic-osisaf": "fresh",
+  "siedge-osisaf": "fresh",
+  "sitype-osisaf": "fresh",
+  "sidrift-osisaf": "fresh",
+  "sidrift-dtu": "fresh",
+  "sic-dmi-arctic": "fresh",
+  "sic-dmi-antarctic": "fresh",
+  "sit-cs2smos-arctic": "fresh",
+  "sit-cs2smos-antarctic": "fresh",
+  "ist-dmi": "fresh",
+  "sic-fmi": "fresh",
+  "sit-fmi": "fresh"
+ },
+ "reasons": {},
+ "built": {},
+ "withheld": {
+  "sic-osisaf": {},
+  "siedge-osisaf": {},
+  "sitype-osisaf": {},
+  "sidrift-dtu": {},
+  "sic-dmi-arctic": {},
+  "sic-dmi-antarctic": {},
+  "sit-cs2smos-arctic": {},
+  "sit-cs2smos-antarctic": {},
+  "ist-dmi": {},
+  "sic-fmi": {},
+  "sit-fmi": {}
+ },
+ "deploy": true,
+ "notes": [
+  "sic-osisaf: nearest frame is 141.5 h old, past its 72 h budget \u2014 upstream has nothing newer",
+  "sic-dmi-arctic: nearest frame is 141.5 h old, past its 96 h budget \u2014 upstream has nothing newer",
+  "sic-dmi-antarctic: nearest frame is 165.5 h old, past its 96 h budget \u2014 upstream has nothing newer",
+  "sit-cs2smos-antarctic: nearest frame is 309.5 h old, past its 168 h budget \u2014 upstream has nothing newer",
+  "ist-dmi: nearest frame is 117.5 h old, past its 72 h budget \u2014 upstream has nothing newer"
+ ],
+ "behind": [],
+ "tile_keys": {
+  "sic-osisaf": "v1-sic-osisaf20261019T000000Z",
+  "siedge-osisaf": "v1-siedge-osisaf20261023T000000Z",
+  "sitype-osisaf": "v1-sitype-osisaf20261023T000000Z",
+  "sidrift-dtu": "v1-sidrift-dtu20261024T000000Z",
+  "sic-dmi-arctic": "v1-sic-dmi-arctic20261019T000000Z",
+  "sic-dmi-antarctic": "v1-sic-dmi-antarctic20261018T000000Z",
+  "sit-cs2smos-arctic": "v1-sit-cs2smos-arctic20260412T000000Z",
+  "sit-cs2smos-antarctic": "v1-sit-cs2smos-antarctic20261012T000000Z",
+  "ist-dmi": "v1-ist-dmi20261020T000000Z",
+  "sic-fmi": "v1-sic-fmi20261024T000000Z",
+  "sit-fmi": "v1-sit-fmi20261024T000000Z"
+ }
+}
