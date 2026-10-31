@@ -1,0 +1,27 @@
+{
+ "schema": 1,
+ "product": "siedge-osisaf",
+ "title": "Sea ice edge, both poles, daily: open water, open ice, closed ice (EUMETSAT OSI SAF)",
+ "fate": "fresh",
+ "reason": null,
+ "checked": "2026-10-31T15:22:35Z",
+ "updated": "2026-10-31T06:29:08Z",
+ "hour": "2026-10-30T00:00:00Z",
+ "modelRun": null,
+ "source": "EUMETSAT OSI SAF / Copernicus Marine",
+ "hours": [
+  "2026-10-30T00:00:00Z"
+ ],
+ "files": {
+  "siedge-osisaf.json": {
+   "bytes": 979709,
+   "sha256": "3ae9f5e08f51534b1f94d7260900b793c2df007a2ac6b2ea6f895301402e9553"
+  }
+ },
+ "tiles": {
+  "tiles-siedge-osisaf": {
+   "state": "kept",
+   "reason": null
+  }
+ }
+}

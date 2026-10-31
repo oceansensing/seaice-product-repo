@@ -1,0 +1,42 @@
+{
+ "schema": 1,
+ "generated": "2026-10-31T15:20:18Z",
+ "mode": "full",
+ "products": {
+  "sic-osisaf": {
+   "tile_key": "v1-sic-osisaf20261030T000000Z"
+  },
+  "siedge-osisaf": {
+   "tile_key": "v1-siedge-osisaf20261030T000000Z"
+  },
+  "sitype-osisaf": {
+   "tile_key": "v1-sitype-osisaf20261030T000000Z"
+  },
+  "sidrift-dtu": {
+   "tile_key": "v1-sidrift-dtu20261031T000000Z"
+  },
+  "sic-dmi-arctic": {
+   "tile_key": "v1-sic-dmi-arctic20261029T000000Z"
+  },
+  "sic-dmi-antarctic": {
+   "tile_key": "v1-sic-dmi-antarctic20261018T000000Z"
+  },
+  "sit-cs2smos-arctic": {
+   "tile_key": "v1-sit-cs2smos-arctic20261026T000000Z"
+  },
+  "sit-cs2smos-antarctic": {
+   "tile_key": "v1-sit-cs2smos-antarctic20261012T000000Z"
+  },
+  "ist-dmi": {
+   "tile_key": "v1-ist-dmi20261029T000000Z"
+  },
+  "sic-fmi": {
+   "tile_key": "v1-sic-fmi20261031T000000Z",
+   "held_key": "v1-sic-fmi20261030T000000Z"
+  },
+  "sit-fmi": {
+   "tile_key": "v1-sit-fmi20261031T000000Z",
+   "held_key": "v1-sit-fmi20261030T000000Z"
+  }
+ }
+}
