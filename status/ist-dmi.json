@@ -1,0 +1,27 @@
+{
+ "schema": 1,
+ "product": "ist-dmi",
+ "title": "Sea and ice surface temperature, Arctic, daily analysis at 0.05 degree (DMI)",
+ "fate": "fresh",
+ "reason": null,
+ "checked": "2026-11-07T18:22:56Z",
+ "updated": "2026-11-07T12:26:15Z",
+ "hour": "2026-11-06T00:00:00Z",
+ "modelRun": null,
+ "source": "DMI / Copernicus Marine",
+ "hours": [
+  "2026-11-06T00:00:00Z"
+ ],
+ "files": {
+  "ist-dmi.json": {
+   "bytes": 1471283,
+   "sha256": "99cbd2ddf1f3c1667123ea06601f6382b30d49dd779e0e78a8165f06da0e5ddf"
+  }
+ },
+ "tiles": {
+  "tiles-ist-dmi": {
+   "state": "kept",
+   "reason": null
+  }
+ }
+}

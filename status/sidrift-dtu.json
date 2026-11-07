@@ -1,0 +1,27 @@
+{
+ "schema": 1,
+ "product": "sidrift-dtu",
+ "title": "Sea ice drift from Sentinel-1 SAR, both poles, 24 hour composites every 12 hours (DTU Space)",
+ "fate": "fresh",
+ "reason": null,
+ "checked": "2026-11-07T18:22:56Z",
+ "updated": "2026-11-07T15:23:01Z",
+ "hour": "2026-11-07T00:00:00Z",
+ "modelRun": null,
+ "source": "DTU Space / Copernicus Marine",
+ "hours": [
+  "2026-11-07T00:00:00Z"
+ ],
+ "files": {
+  "sidrift-dtu.json": {
+   "bytes": 2582620,
+   "sha256": "2ab2ffd6c2d5ca7b54d8e8adada6006c77717cd97dcaa6a66ddb7581b07348ff"
+  }
+ },
+ "tiles": {
+  "tiles-sidrift-dtu": {
+   "state": "kept",
+   "reason": null
+  }
+ }
+}

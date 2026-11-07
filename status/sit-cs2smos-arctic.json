@@ -1,0 +1,27 @@
+{
+ "schema": 1,
+ "product": "sit-cs2smos-arctic",
+ "title": "Sea ice thickness, Arctic, 7 day means from CryoSat-2 and SMOS, October to April (AWI)",
+ "fate": "fresh",
+ "reason": null,
+ "checked": "2026-11-07T18:22:56Z",
+ "updated": "2026-11-07T12:26:15Z",
+ "hour": "2026-11-02T00:00:00Z",
+ "modelRun": null,
+ "source": "AWI CryoSat-2 and SMOS / Copernicus Marine",
+ "hours": [
+  "2026-11-02T00:00:00Z"
+ ],
+ "files": {
+  "sit-cs2smos-arctic.json": {
+   "bytes": 534876,
+   "sha256": "4af8faa4b78b015bc5d0c7d35676d9fc3675582d41efc6f806936afe05e599b1"
+  }
+ },
+ "tiles": {
+  "tiles-sit-cs2smos-arctic": {
+   "state": "kept",
+   "reason": null
+  }
+ }
+}

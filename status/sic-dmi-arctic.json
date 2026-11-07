@@ -1,0 +1,27 @@
+{
+ "schema": 1,
+ "product": "sic-dmi-arctic",
+ "title": "Sea ice concentration, Arctic, daily at 1 km from SAR and AMSR (DMI)",
+ "fate": "fresh",
+ "reason": null,
+ "checked": "2026-11-07T18:22:56Z",
+ "updated": "2026-11-07T03:24:31Z",
+ "hour": "2026-11-05T00:00:00Z",
+ "modelRun": null,
+ "source": "DMI / Copernicus Marine",
+ "hours": [
+  "2026-11-05T00:00:00Z"
+ ],
+ "files": {
+  "sic-dmi-arctic.json": {
+   "bytes": 2240830,
+   "sha256": "0f2729ebe3f3fb8c4a3411f9558de60d19171b14f570cd6b301c8066c63868bb"
+  }
+ },
+ "tiles": {
+  "tiles-sic-dmi-arctic": {
+   "state": "kept",
+   "reason": null
+  }
+ }
+}
