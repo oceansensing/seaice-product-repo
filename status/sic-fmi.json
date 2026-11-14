@@ -1,0 +1,27 @@
+{
+ "schema": 1,
+ "product": "sic-fmi",
+ "title": "Sea ice concentration, Baltic Sea, daily ice charts in the ice season (FMI and SMHI)",
+ "fate": "fresh",
+ "reason": null,
+ "checked": "2026-11-14T21:23:40Z",
+ "updated": "2026-11-12T15:25:18Z",
+ "hour": "2026-11-12T12:00:00Z",
+ "modelRun": null,
+ "source": "FMI and SMHI / Copernicus Marine",
+ "hours": [
+  "2026-11-12T12:00:00Z"
+ ],
+ "files": {
+  "sic-fmi.json": {
+   "bytes": 479555,
+   "sha256": "97d3852097c56e276ed6d29ef8948ef661f06809e7409c3ea8251f7ba0daddca"
+  }
+ },
+ "tiles": {
+  "tiles-sic-fmi": {
+   "state": "kept",
+   "reason": null
+  }
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "schema": 1,
+ "product": "sidrift-osisaf",
+ "title": "Sea ice drift, both poles, over 48 hours at 62.5 km (EUMETSAT OSI SAF)",
+ "fate": "fresh",
+ "reason": null,
+ "checked": "2026-11-14T21:23:40Z",
+ "updated": "2026-11-14T06:29:06Z",
+ "hour": "2026-11-13T00:00:00Z",
+ "modelRun": null,
+ "source": "EUMETSAT OSI SAF / Copernicus Marine",
+ "hours": [
+  "2026-11-13T00:00:00Z"
+ ],
+ "files": {
+  "sidrift-osisaf.json": {
+   "bytes": 2109855,
+   "sha256": "286f3f1b81aa41c8e35ef5e240a1a5b9ea4fe60162f7631e4944ac07657f54f1"
+  }
+ }
+}
