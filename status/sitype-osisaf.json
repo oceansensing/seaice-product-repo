@@ -1,0 +1,27 @@
+{
+ "schema": 1,
+ "product": "sitype-osisaf",
+ "title": "Sea ice type, both poles, daily: open water, first-year, multi-year, ambiguous (EUMETSAT OSI SAF)",
+ "fate": "fresh",
+ "reason": null,
+ "checked": "2026-11-21T18:24:47Z",
+ "updated": "2026-11-21T06:30:19Z",
+ "hour": "2026-11-20T00:00:00Z",
+ "modelRun": null,
+ "source": "EUMETSAT OSI SAF / Copernicus Marine",
+ "hours": [
+  "2026-11-20T00:00:00Z"
+ ],
+ "files": {
+  "sitype-osisaf.json": {
+   "bytes": 980435,
+   "sha256": "3c6d6f1752a4b3b3e11ab50162f47357694e0b6fbbb49bac0b82c8e539d9576b"
+  }
+ },
+ "tiles": {
+  "tiles-sitype-osisaf": {
+   "state": "kept",
+   "reason": null
+  }
+ }
+}
