@@ -1,0 +1,259 @@
+{
+ "schema": 2,
+ "contract": 1,
+ "generated": "2026-11-28T12:27:19Z",
+ "mode": "full",
+ "run": {
+  "id": "46144416624",
+  "url": "https://github.com/oceansensing/seaice-product-repo/actions/runs/46144416624"
+ },
+ "schedule": {
+  "crons": [
+   "17 */3 * * *"
+  ],
+  "longestGapHours": 3.0
+ },
+ "products": {
+  "sic-osisaf": {
+   "title": "Sea ice concentration, both poles, daily, AMSR at 10 km (EUMETSAT OSI SAF)",
+   "roots": [
+    "sic-osisaf.json"
+   ],
+   "fate": "fresh",
+   "reason": null,
+   "checked": "2026-11-28T12:27:19Z",
+   "updated": "2026-11-28T03:26:34Z",
+   "hour": "2026-11-27T00:00:00Z",
+   "modelRun": null,
+   "source": "EUMETSAT OSI SAF / Copernicus Marine",
+   "hours": [
+    "2026-11-27T00:00:00Z"
+   ],
+   "stale": false,
+   "staleCause": null,
+   "ageHours": 36.46,
+   "nearestOffsetHours": 36.46
+  },
+  "siedge-osisaf": {
+   "title": "Sea ice edge, both poles, daily: open water, open ice, closed ice (EUMETSAT OSI SAF)",
+   "roots": [
+    "siedge-osisaf.json"
+   ],
+   "fate": "fresh",
+   "reason": null,
+   "checked": "2026-11-28T12:27:19Z",
+   "updated": "2026-11-27T06:34:37Z",
+   "hour": "2026-11-26T00:00:00Z",
+   "modelRun": null,
+   "source": "EUMETSAT OSI SAF / Copernicus Marine",
+   "hours": [
+    "2026-11-26T00:00:00Z"
+   ],
+   "stale": false,
+   "staleCause": null,
+   "ageHours": 60.46,
+   "nearestOffsetHours": 60.46
+  },
+  "sitype-osisaf": {
+   "title": "Sea ice type, both poles, daily: open water, first-year, multi-year, ambiguous (EUMETSAT OSI SAF)",
+   "roots": [
+    "sitype-osisaf.json"
+   ],
+   "fate": "fresh",
+   "reason": null,
+   "checked": "2026-11-28T12:27:19Z",
+   "updated": "2026-11-27T06:34:37Z",
+   "hour": "2026-11-26T00:00:00Z",
+   "modelRun": null,
+   "source": "EUMETSAT OSI SAF / Copernicus Marine",
+   "hours": [
+    "2026-11-26T00:00:00Z"
+   ],
+   "stale": false,
+   "staleCause": null,
+   "ageHours": 60.46,
+   "nearestOffsetHours": 60.46
+  },
+  "sidrift-osisaf": {
+   "title": "Sea ice drift, both poles, over 48 hours at 62.5 km (EUMETSAT OSI SAF)",
+   "roots": [
+    "sidrift-osisaf.json"
+   ],
+   "fate": "fresh",
+   "reason": null,
+   "checked": "2026-11-28T12:27:19Z",
+   "updated": "2026-11-28T06:31:02Z",
+   "hour": "2026-11-27T00:00:00Z",
+   "modelRun": null,
+   "source": "EUMETSAT OSI SAF / Copernicus Marine",
+   "hours": [
+    "2026-11-27T00:00:00Z"
+   ],
+   "stale": false,
+   "staleCause": null,
+   "ageHours": 36.46,
+   "nearestOffsetHours": 36.46
+  },
+  "sidrift-dtu": {
+   "title": "Sea ice drift from Sentinel-1 SAR, both poles, 24 hour composites every 12 hours (DTU Space)",
+   "roots": [
+    "sidrift-dtu.json"
+   ],
+   "fate": "fresh",
+   "reason": null,
+   "checked": "2026-11-28T12:27:19Z",
+   "updated": "2026-11-28T12:27:19Z",
+   "hour": "2026-11-28T00:00:00Z",
+   "modelRun": null,
+   "source": "DTU Space / Copernicus Marine",
+   "hours": [
+    "2026-11-28T00:00:00Z"
+   ],
+   "stale": false,
+   "staleCause": null,
+   "ageHours": 12.46,
+   "nearestOffsetHours": 12.46
+  },
+  "sic-dmi-arctic": {
+   "title": "Sea ice concentration, Arctic, daily at 1 km from SAR and AMSR (DMI)",
+   "roots": [
+    "sic-dmi-arctic.json"
+   ],
+   "fate": "fresh",
+   "reason": null,
+   "checked": "2026-11-28T12:27:19Z",
+   "updated": "2026-11-28T03:26:34Z",
+   "hour": "2026-11-26T00:00:00Z",
+   "modelRun": null,
+   "source": "DMI / Copernicus Marine",
+   "hours": [
+    "2026-11-26T00:00:00Z"
+   ],
+   "stale": false,
+   "staleCause": null,
+   "ageHours": 60.46,
+   "nearestOffsetHours": 60.46
+  },
+  "sic-dmi-antarctic": {
+   "title": "Sea ice concentration, Antarctic, at 1 km from SAR swaths, the newest of 7 days with its age (DMI)",
+   "roots": [
+    "sic-dmi-antarctic.json",
+    "sic-dmi-antarctic-age.json"
+   ],
+   "fate": "fresh",
+   "reason": null,
+   "checked": "2026-11-28T12:27:19Z",
+   "updated": "2026-11-24T06:34:18Z",
+   "hour": "2026-11-23T00:00:00Z",
+   "modelRun": null,
+   "source": "DMI / Copernicus Marine",
+   "hours": [
+    "2026-11-23T00:00:00Z"
+   ],
+   "stale": true,
+   "staleCause": "upstream",
+   "ageHours": 132.46,
+   "nearestOffsetHours": 132.46
+  },
+  "sit-cs2smos-arctic": {
+   "title": "Sea ice thickness, Arctic, 7 day means from CryoSat-2 and SMOS, October to April (AWI)",
+   "roots": [
+    "sit-cs2smos-arctic.json"
+   ],
+   "fate": "fresh",
+   "reason": null,
+   "checked": "2026-11-28T12:27:19Z",
+   "updated": "2026-11-28T12:27:19Z",
+   "hour": "2026-11-23T00:00:00Z",
+   "modelRun": null,
+   "source": "AWI CryoSat-2 and SMOS / Copernicus Marine",
+   "hours": [
+    "2026-11-23T00:00:00Z"
+   ],
+   "stale": false,
+   "staleCause": null,
+   "ageHours": 132.46,
+   "nearestOffsetHours": 132.46
+  },
+  "sit-cs2smos-antarctic": {
+   "title": "Sea ice thickness, Antarctic, 7 day means from CryoSat-2 and SMOS (AWI)",
+   "roots": [
+    "sit-cs2smos-antarctic.json"
+   ],
+   "fate": "fresh",
+   "reason": null,
+   "checked": "2026-11-28T12:27:19Z",
+   "updated": "2026-11-24T06:34:18Z",
+   "hour": "2026-10-12T00:00:00Z",
+   "modelRun": null,
+   "source": "AWI CryoSat-2 and SMOS / Copernicus Marine",
+   "hours": [
+    "2026-10-12T00:00:00Z"
+   ],
+   "stale": true,
+   "staleCause": "upstream",
+   "ageHours": 1140.46,
+   "nearestOffsetHours": 1140.46
+  },
+  "ist-dmi": {
+   "title": "Sea and ice surface temperature, Arctic, daily analysis at 0.05 degree (DMI)",
+   "roots": [
+    "ist-dmi.json"
+   ],
+   "fate": "fresh",
+   "reason": null,
+   "checked": "2026-11-28T12:27:19Z",
+   "updated": "2026-11-28T12:27:19Z",
+   "hour": "2026-11-27T00:00:00Z",
+   "modelRun": null,
+   "source": "DMI / Copernicus Marine",
+   "hours": [
+    "2026-11-27T00:00:00Z"
+   ],
+   "stale": false,
+   "staleCause": null,
+   "ageHours": 36.46,
+   "nearestOffsetHours": 36.46
+  },
+  "sic-fmi": {
+   "title": "Sea ice concentration, Baltic Sea, daily ice charts in the ice season (FMI and SMHI)",
+   "roots": [
+    "sic-fmi.json"
+   ],
+   "fate": "fresh",
+   "reason": null,
+   "checked": "2026-11-28T12:27:19Z",
+   "updated": "2026-11-26T15:24:16Z",
+   "hour": "2026-11-26T12:00:00Z",
+   "modelRun": null,
+   "source": "FMI and SMHI / Copernicus Marine",
+   "hours": [
+    "2026-11-26T12:00:00Z"
+   ],
+   "stale": false,
+   "staleCause": null,
+   "ageHours": 48.46,
+   "nearestOffsetHours": 48.46
+  },
+  "sit-fmi": {
+   "title": "Sea ice thickness, Baltic Sea, daily ice charts in the ice season (FMI and SMHI)",
+   "roots": [
+    "sit-fmi.json"
+   ],
+   "fate": "fresh",
+   "reason": null,
+   "checked": "2026-11-28T12:27:19Z",
+   "updated": "2026-11-26T15:24:16Z",
+   "hour": "2026-11-26T12:00:00Z",
+   "modelRun": null,
+   "source": "FMI and SMHI / Copernicus Marine",
+   "hours": [
+    "2026-11-26T12:00:00Z"
+   ],
+   "stale": false,
+   "staleCause": null,
+   "ageHours": 48.46,
+   "nearestOffsetHours": 48.46
+  }
+ }
+}

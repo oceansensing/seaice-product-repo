@@ -1,0 +1,27 @@
+{
+ "schema": 1,
+ "product": "sit-cs2smos-antarctic",
+ "title": "Sea ice thickness, Antarctic, 7 day means from CryoSat-2 and SMOS (AWI)",
+ "fate": "fresh",
+ "reason": null,
+ "checked": "2026-11-28T12:27:19Z",
+ "updated": "2026-11-24T06:34:18Z",
+ "hour": "2026-10-12T00:00:00Z",
+ "modelRun": null,
+ "source": "AWI CryoSat-2 and SMOS / Copernicus Marine",
+ "hours": [
+  "2026-10-12T00:00:00Z"
+ ],
+ "files": {
+  "sit-cs2smos-antarctic.json": {
+   "bytes": 535567,
+   "sha256": "9fbd04e0eb4366bb95167ec496f528fc1cd6a13a42d6f3e50681b01b9cf5f3bf"
+  }
+ },
+ "tiles": {
+  "tiles-sit-cs2smos-antarctic": {
+   "state": "kept",
+   "reason": null
+  }
+ }
+}

@@ -1,0 +1,35 @@
+{
+ "schema": 1,
+ "product": "sic-dmi-antarctic",
+ "title": "Sea ice concentration, Antarctic, at 1 km from SAR swaths, the newest of 7 days with its age (DMI)",
+ "fate": "fresh",
+ "reason": null,
+ "checked": "2026-11-28T12:27:19Z",
+ "updated": "2026-11-24T06:34:18Z",
+ "hour": "2026-11-23T00:00:00Z",
+ "modelRun": null,
+ "source": "DMI / Copernicus Marine",
+ "hours": [
+  "2026-11-23T00:00:00Z"
+ ],
+ "files": {
+  "sic-dmi-antarctic-age.json": {
+   "bytes": 3533097,
+   "sha256": "c7f5bef67ed09682edd28690c9ead57a68f4a0d499099cda19098135b3e9c4ad"
+  },
+  "sic-dmi-antarctic.json": {
+   "bytes": 3544270,
+   "sha256": "b926fcc7b38779ec913fd1c456c09704b807be9c36182f7fb0c133ec0a5a51e4"
+  }
+ },
+ "tiles": {
+  "tiles-sic-dmi-antarctic": {
+   "state": "kept",
+   "reason": null
+  },
+  "tiles-sic-dmi-antarctic-age": {
+   "state": "kept",
+   "reason": null
+  }
+ }
+}
